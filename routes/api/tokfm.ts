@@ -84,6 +84,7 @@ export async function schedule(): Promise<ScheduleItem[]> {
       imageUrl,
     };
   });
+  elements.sort((a, b) => a.startTime.since(b.startTime).sign);
   backfillEnds(elements);
   return elements;
 }
