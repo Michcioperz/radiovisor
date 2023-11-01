@@ -83,7 +83,9 @@ export default async function Home() {
           <ul>
             {item.authors.map((author) => <li>{author}</li>)}
           </ul>
-          {item.description}
+          <small style={{whiteSpace: "pre-wrap"}}>
+            {item.description}
+          </small>
         </div>
       ))}
     </div>
