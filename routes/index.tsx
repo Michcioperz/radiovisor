@@ -31,7 +31,7 @@ export default async function Home() {
     )
   ).forEach((item) => allItems.push(item));
   allItems.sort((a, b) => a.startTime.since(b.startTime).sign);
-  const allTimes: ScheduleItem[] = [];
+  const allTimes: Temporal.ZonedDateTime[] = [];
   const allTimeMillis = new Set();
   allItems.forEach((item) => {
     if (!allTimeMillis.has(item.startTimeMillis)) {
